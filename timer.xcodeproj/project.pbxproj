@@ -21,6 +21,8 @@
 		E900FD0821AC1F35001D5CC1 /* DSEG7Classic-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E900FD0021AC1F0B001D5CC1 /* DSEG7Classic-RegularItalic.ttf */; };
 		E900FD0C21AC2205001D5CC1 /* UIColors+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E900FD0B21AC2205001D5CC1 /* UIColors+Util.swift */; };
 		E900FD4821B18447001D5CC1 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E900FD4721B18447001D5CC1 /* TimerViewController.swift */; };
+		E900FD4C21B22396001D5CC1 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E900FD4A21B2233C001D5CC1 /* RxSwift.framework */; };
+		E900FD4E21B223FC001D5CC1 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E900FD4A21B2233C001D5CC1 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,20 @@
 			remoteInfo = timer;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E900FD4F21B223FD001D5CC1 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				E900FD4E21B223FC001D5CC1 /* RxSwift.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		57A5F431B75D2840BBF49D09 /* timerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timerTests.swift; sourceTree = "<group>"; };
@@ -52,6 +68,7 @@
 		E900FD0121AC1F0B001D5CC1 /* DSEG7Classic-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DSEG7Classic-Regular.ttf"; sourceTree = "<group>"; };
 		E900FD0B21AC2205001D5CC1 /* UIColors+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+Util.swift"; sourceTree = "<group>"; };
 		E900FD4721B18447001D5CC1 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
+		E900FD4A21B2233C001D5CC1 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +83,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E900FD4C21B22396001D5CC1 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +105,7 @@
 				57A5F078C71F7B2543BF3226 /* Products */,
 				57A5F6D4CD4E5F4CB83DA425 /* timer */,
 				57A5F7000F19FA98E3BB0472 /* timerTests */,
+				E900FD4921B2233C001D5CC1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -176,6 +195,14 @@
 			path = Excentesions;
 			sourceTree = "<group>";
 		};
+		E900FD4921B2233C001D5CC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E900FD4A21B2233C001D5CC1 /* RxSwift.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -186,6 +213,7 @@
 				57A5F033106A663F1993BAF2 /* Sources */,
 				57A5F48B1448BFE7B5AE87C2 /* Frameworks */,
 				57A5F9195AE51A0DEF68A2E9 /* Resources */,
+				E900FD4F21B223FD001D5CC1 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -320,6 +348,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = timer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sakazuki.timer;
@@ -476,6 +508,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = timer/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sakazuki.timer;
