@@ -1,5 +1,8 @@
 .DS_Store
 
+## Various settings
+.idea/*
+
 ## Carthage
 Carthage/*
 !Carthage/Build
