@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		57A5F057BBD56BE84BE59D15 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A5FA1F002923DFA7157044 /* AppDelegate.swift */; };
 		57A5F069BAA657150CA8525E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57A5FCA93FCDF832E5C7B018 /* Assets.xcassets */; };
+		57A5F0FED394BAE3157B94D1 /* TimerViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A5FD7C3390EEBEDE005DDE /* TimerViewPresenter.swift */; };
 		57A5F22F8D1ED5ED70CBE842 /* timerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A5F431B75D2840BBF49D09 /* timerTests.swift */; };
 		57A5F268A7F0C7C8B95FC1C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A5FFE0520B978D932845F7 /* LaunchScreen.storyboard */; };
 		E900FCF021AC1988001D5CC1 /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E900FCF221AC1988001D5CC1 /* Timer.storyboard */; };
@@ -23,6 +24,7 @@
 		E900FD4821B18447001D5CC1 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E900FD4721B18447001D5CC1 /* TimerViewController.swift */; };
 		E900FD4C21B22396001D5CC1 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E900FD4A21B2233C001D5CC1 /* RxSwift.framework */; };
 		E900FD4E21B223FC001D5CC1 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E900FD4A21B2233C001D5CC1 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E900FD5221B4003F001D5CC1 /* TimerUIDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E900FD5121B4003F001D5CC1 /* TimerUIDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,7 @@
 		57A5FA1F002923DFA7157044 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		57A5FCA93FCDF832E5C7B018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57A5FCCCDDE9F2D70145949B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
+		57A5FD7C3390EEBEDE005DDE /* TimerViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewPresenter.swift; sourceTree = "<group>"; };
 		57A5FF92C3A6CDEA25AA543A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E900FCF121AC1988001D5CC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Timer.storyboard; sourceTree = "<group>"; };
 		E900FCFB21AC1F0B001D5CC1 /* DSEG7Classic-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DSEG7Classic-Italic.ttf"; sourceTree = "<group>"; };
@@ -69,6 +72,7 @@
 		E900FD0B21AC2205001D5CC1 /* UIColors+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+Util.swift"; sourceTree = "<group>"; };
 		E900FD4721B18447001D5CC1 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		E900FD4A21B2233C001D5CC1 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		E900FD5121B4003F001D5CC1 /* TimerUIDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerUIDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,7 @@
 		E900FCE921AC16D8001D5CC1 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				E900FD5021B40027001D5CC1 /* Timer */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -201,6 +206,15 @@
 				E900FD4A21B2233C001D5CC1 /* RxSwift.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E900FD5021B40027001D5CC1 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				E900FD5121B4003F001D5CC1 /* TimerUIDelegate.swift */,
+				57A5FD7C3390EEBEDE005DDE /* TimerViewPresenter.swift */,
+			);
+			path = Timer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,8 +315,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				E900FD0C21AC2205001D5CC1 /* UIColors+Util.swift in Sources */,
+				E900FD5221B4003F001D5CC1 /* TimerUIDelegate.swift in Sources */,
 				E900FD4821B18447001D5CC1 /* TimerViewController.swift in Sources */,
 				57A5F057BBD56BE84BE59D15 /* AppDelegate.swift in Sources */,
+				57A5F0FED394BAE3157B94D1 /* TimerViewPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
