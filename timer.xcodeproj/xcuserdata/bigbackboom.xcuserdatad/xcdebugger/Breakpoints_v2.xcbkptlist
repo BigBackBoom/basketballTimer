@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "timer/View/Timer/TimerViewController.swift"
-            timestampString = "565448861.276026"
+            timestampString = "565977670.773038"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "47"
@@ -26,23 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "timer/View/Timer/TimerViewController.swift"
-            timestampString = "565448861.276512"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "onSwipeLabelUp(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "timer/View/Timer/TimerViewController.swift"
-            timestampString = "565448861.276823"
+            timestampString = "565977670.7731169"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "48"
@@ -58,12 +42,106 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "timer/View/Timer/TimerViewController.swift"
-            timestampString = "565448861.277053"
+            timestampString = "565977670.773176"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "33"
             endingLineNumber = "33"
-            landmarkName = "viewWillTransition(to:with:)"
+            landmarkName = "TimerViewController"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "timer/View/Timer/TimerViewController.swift"
+            timestampString = "565977670.77329"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "TimerViewController"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "timer.TimerViewController.(prevOrientation in _46A63E8824099101CF5A8437CB4C38E2).getter : __C.UIInterfaceOrientationMask"
+                  moduleName = "timer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bigbackboom/Documents/timer/timer/View/Timer/TimerViewController.swift"
+                  timestampString = "565973278.322298"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "102">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "timer.TimerViewController.(prevOrientation in _46A63E8824099101CF5A8437CB4C38E2).setter : __C.UIInterfaceOrientationMask"
+                  moduleName = "timer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bigbackboom/Documents/timer/timer/View/Timer/TimerViewController.swift"
+                  timestampString = "565973278.324899"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "114">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "timer.TimerViewController.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; timer.TimerViewController"
+                  moduleName = "timer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bigbackboom/Documents/timer/timer/View/Timer/TimerViewController.swift"
+                  timestampString = "565973278.326849"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "591">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "timer.TimerViewController.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;timer.TimerViewController&gt;"
+                  moduleName = "timer"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/bigbackboom/Documents/timer/timer/View/Timer/TimerViewController.swift"
+                  timestampString = "565973278.329497"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "26"
+                  endingLineNumber = "26"
+                  offsetFromSymbolStart = "562">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "timer/View/Timer/TimerViewController.swift"
+            timestampString = "565977670.773373"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
+            landmarkName = "setTimer(_:_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -74,12 +152,28 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "timer/View/Timer/TimerViewController.swift"
-            timestampString = "565448861.2772599"
+            timestampString = "565977670.7734571"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "onSwipeLabelUp(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "timer/View/Timer/TimerViewController.swift"
+            timestampString = "565977670.773541"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "onSwipeLabelDown(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

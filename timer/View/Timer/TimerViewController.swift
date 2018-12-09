@@ -10,17 +10,24 @@ import UIKit
 
 class TimerViewController: UIViewController {
 
+    private enum TimeLabelTag: Int {
+        case tenthMinLabel = 0
+        case minLabel = 1
+        case tenthSecLabel = 2
+        case secLabel = 3
+    }
+
     @IBOutlet weak var tenthMinLabel: UILabel!
     @IBOutlet weak var minLabel: UILabel!
     @IBOutlet weak var tenthSecLabel: UILabel!
     @IBOutlet weak var secLabel: UILabel!
+    @IBOutlet weak var switchButton: UIButton!
 
     private var prevOrientation = UIInterfaceOrientationMask.landscapeLeft
-    private var timerViewPresenter: TimerViewPresenter? = nil
+    private var timerViewPresenter: TimerPresenterProtocol? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         timerViewPresenter = TimerViewPresenter(delegate: self)
     }
 
@@ -50,8 +57,10 @@ class TimerViewController: UIViewController {
         if sender.view is UILabel {
             let label = sender.view as! UILabel
             var min = UInt(label.text ?? "0") ?? 0
-            min = min + 1
-            label.text = String(min)
+            if (min < 99) {
+                min = min + 1
+                setTimer(label.tag, min)
+            }
         }
     }
 
@@ -59,21 +68,27 @@ class TimerViewController: UIViewController {
         if sender.view is UILabel {
             let label = sender.view as! UILabel
             var min = UInt(label.text ?? "0") ?? 0
-            min = min - 1
-            label.text = String(min)
+            if (min > 0) {
+                min = min - 1
+                setTimer(label.tag, min)
+            }
         }
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setTimer(_ tag: Int, _ time: UInt) {
+        switch tag {
+        case TimeLabelTag.tenthMinLabel.rawValue:
+            timerViewPresenter?.updateTenthMin(time)
+        case TimeLabelTag.minLabel.rawValue:
+            timerViewPresenter?.updateMin(time)
+        case TimeLabelTag.tenthSecLabel.rawValue:
+            timerViewPresenter?.updateTenthSec(time)
+        case TimeLabelTag.secLabel.rawValue:
+            timerViewPresenter?.updateSec(time)
+        default:
+            break;
+        }
     }
-    */
-
 }
 
 extension TimerViewController: TimerUIDelegate {

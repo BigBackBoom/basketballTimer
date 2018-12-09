@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gkh-5A-bjG">
-    <device id="retina4_7" orientation="landscape">
+    <device id="ipad10_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -20,42 +20,42 @@
             <objects>
                 <viewController id="Gkh-5A-bjG" customClass="TimerViewController" customModule="timer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Fba-w4-Rtq">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1112" height="834"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O9H-ar-GpK">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <rect key="frame" x="0.0" y="20" width="1112" height="834"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="121" translatesAutoresizingMaskIntoConstraints="NO" id="fJ1-OA-uZa">
-                                        <rect key="frame" x="8" y="96" width="149.5" height="183"/>
+                                        <rect key="frame" x="8" y="325.5" width="150" height="183"/>
                                         <fontDescription key="fontDescription" name="DSEG7Classic-Bold" family="DSEG7 Classic" pointSize="183"/>
                                         <color key="textColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="121" translatesAutoresizingMaskIntoConstraints="NO" id="cYC-ja-Iy7">
-                                        <rect key="frame" x="157.5" y="96" width="150" height="183"/>
+                                        <rect key="frame" x="158" y="325.5" width="150" height="183"/>
                                         <fontDescription key="fontDescription" name="DSEG7Classic-Bold" family="DSEG7 Classic" pointSize="183"/>
                                         <color key="textColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="121" translatesAutoresizingMaskIntoConstraints="NO" id="NZY-YX-hwW">
-                                        <rect key="frame" x="315" y="96" width="37" height="183"/>
+                                        <rect key="frame" x="537.5" y="325.5" width="37" height="183"/>
                                         <fontDescription key="fontDescription" name="DSEG7Classic-Bold" family="DSEG7 Classic" pointSize="183"/>
                                         <color key="textColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="121" translatesAutoresizingMaskIntoConstraints="NO" id="yEf-YV-cKe">
-                                        <rect key="frame" x="359" y="96" width="150" height="183"/>
+                                        <rect key="frame" x="804" y="325.5" width="150" height="183"/>
                                         <fontDescription key="fontDescription" name="DSEG7Classic-Bold" family="DSEG7 Classic" pointSize="183"/>
                                         <color key="textColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="8" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="121" translatesAutoresizingMaskIntoConstraints="NO" id="a6o-ZG-fjJ">
-                                        <rect key="frame" x="509" y="96" width="150" height="183"/>
+                                        <rect key="frame" x="954" y="325.5" width="150" height="183"/>
                                         <fontDescription key="fontDescription" name="DSEG7Classic-Bold" family="DSEG7 Classic" pointSize="183"/>
                                         <color key="textColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -79,11 +79,29 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="X2d-ot-npN">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <rect key="frame" x="0.0" y="20" width="1112" height="834"/>
                                 <subviews>
-                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="121" translatesAutoresizingMaskIntoConstraints="NO" id="EK6-3C-dMK">
-                                        <rect key="frame" x="8" y="96" width="149.5" height="183"/>
+                                    <label opaque="NO" tag="2" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="rSz-7P-tHI">
+                                        <rect key="frame" x="428" y="116" width="150" height="183"/>
                                         <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="XrG-Hd-ftJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="DSEG7Classic-Bold" family="DSEG7 Classic" pointSize="183"/>
+                                        <color key="textColor" red="0.97254901959999995" green="0.086274509799999996" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="yT0-Pe-j4f" appends="YES" id="0UZ-Z4-I2g"/>
+                                            <outletCollection property="gestureRecognizers" destination="liY-sT-qAO" appends="YES" id="o08-ox-cgj"/>
+                                        </connections>
+                                    </label>
+                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EK6-3C-dMK">
+                                        <rect key="frame" x="8" y="116" width="150" height="182"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="Py2-87-RsH"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="DSEG7Classic-Bold" family="DSEG7 Classic" pointSize="183"/>
                                         <color key="textColor" red="0.97254901959999995" green="0.086274509799999996" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
@@ -93,55 +111,48 @@
                                             <outletCollection property="gestureRecognizers" destination="Icq-dR-KjG" appends="YES" id="e0R-f3-MNz"/>
                                         </connections>
                                     </label>
-                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="121" translatesAutoresizingMaskIntoConstraints="NO" id="eVX-3r-JCl">
-                                        <rect key="frame" x="157.5" y="96" width="150" height="183"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" tag="-1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=":" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="121" translatesAutoresizingMaskIntoConstraints="NO" id="opR-Io-fCc">
+                                        <rect key="frame" x="350" y="116" width="37" height="183"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="DSEG7Classic-Bold" family="DSEG7 Classic" pointSize="183"/>
                                         <color key="textColor" red="0.97254901959999995" green="0.086274509799999996" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=":" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="121" translatesAutoresizingMaskIntoConstraints="NO" id="opR-Io-fCc">
-                                        <rect key="frame" x="315" y="96" width="37" height="183"/>
+                                    <label opaque="NO" tag="3" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" ambiguous="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="ikY-Mi-w93">
+                                        <rect key="frame" x="578" y="116" width="150" height="183"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="fd9-DW-wuS"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="DSEG7Classic-Bold" family="DSEG7 Classic" pointSize="183"/>
                                         <color key="textColor" red="0.97254901959999995" green="0.086274509799999996" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="9O4-GU-Q0z" appends="YES" id="lO6-3l-e5q"/>
+                                            <outletCollection property="gestureRecognizers" destination="Eew-ZZ-YpV" appends="YES" id="Fxy-fW-pt6"/>
+                                        </connections>
                                     </label>
-                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="121" translatesAutoresizingMaskIntoConstraints="NO" id="rSz-7P-tHI">
-                                        <rect key="frame" x="359" y="96" width="150" height="183"/>
-                                        <fontDescription key="fontDescription" name="DSEG7Classic-Bold" family="DSEG7 Classic" pointSize="183"/>
-                                        <color key="textColor" red="0.97254901959999995" green="0.086274509799999996" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <size key="shadowOffset" width="0.0" height="0.0"/>
-                                    </label>
-                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="121" translatesAutoresizingMaskIntoConstraints="NO" id="ikY-Mi-w93">
-                                        <rect key="frame" x="509" y="96" width="150" height="183"/>
+                                    <label opaque="NO" tag="1" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="eVX-3r-JCl">
+                                        <rect key="frame" x="163" y="116" width="150" height="183"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <gestureRecognizers/>
                                         <fontDescription key="fontDescription" name="DSEG7Classic-Bold" family="DSEG7 Classic" pointSize="183"/>
                                         <color key="textColor" red="0.97254901959999995" green="0.086274509799999996" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                         <size key="shadowOffset" width="0.0" height="0.0"/>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="cwm-Ef-cFD" appends="YES" id="hTr-bx-GUC"/>
+                                            <outletCollection property="gestureRecognizers" destination="Qwf-cM-6aJ" appends="YES" id="QUC-Dx-a6O"/>
+                                        </connections>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstItem="rSz-7P-tHI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="opR-Io-fCc" secondAttribute="trailing" id="1ZT-j8-wq6"/>
-                                    <constraint firstItem="opR-Io-fCc" firstAttribute="centerX" secondItem="X2d-ot-npN" secondAttribute="centerX" id="30g-Ed-dyE"/>
-                                    <constraint firstItem="EK6-3C-dMK" firstAttribute="centerY" secondItem="X2d-ot-npN" secondAttribute="centerY" id="98J-xv-7Ky"/>
-                                    <constraint firstItem="eVX-3r-JCl" firstAttribute="centerY" secondItem="X2d-ot-npN" secondAttribute="centerY" id="98w-XH-d0n"/>
-                                    <constraint firstItem="opR-Io-fCc" firstAttribute="centerY" secondItem="X2d-ot-npN" secondAttribute="centerY" id="NFA-nD-i0A"/>
-                                    <constraint firstItem="EK6-3C-dMK" firstAttribute="trailing" secondItem="eVX-3r-JCl" secondAttribute="leading" id="OCP-gp-o9y"/>
-                                    <constraint firstItem="opR-Io-fCc" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eVX-3r-JCl" secondAttribute="trailing" id="RFM-DE-6lL"/>
-                                    <constraint firstItem="ikY-Mi-w93" firstAttribute="centerY" secondItem="X2d-ot-npN" secondAttribute="centerY" id="VOk-h8-H3q"/>
-                                    <constraint firstItem="ikY-Mi-w93" firstAttribute="leading" secondItem="rSz-7P-tHI" secondAttribute="trailing" id="d7A-wb-VuC"/>
-                                    <constraint firstItem="EK6-3C-dMK" firstAttribute="leading" secondItem="X2d-ot-npN" secondAttribute="leading" constant="8" id="fDE-gg-oBs"/>
-                                    <constraint firstAttribute="trailing" secondItem="ikY-Mi-w93" secondAttribute="trailing" constant="8" id="qdm-xv-c47"/>
-                                    <constraint firstItem="rSz-7P-tHI" firstAttribute="centerY" secondItem="X2d-ot-npN" secondAttribute="centerY" id="stg-NU-751"/>
-                                </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcL-EO-QYa">
-                                <rect key="frame" x="299.5" y="309" width="68" height="52"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OcL-EO-QYa" userLabel="Switch">
+                                <rect key="frame" x="522" y="302" width="68" height="52"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="33"/>
                                 <state key="normal" title="Start">
                                     <color key="titleColor" red="0.38039215686274508" green="0.70980392156862748" blue="0.23529411764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -152,6 +163,7 @@
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="OcL-EO-QYa" firstAttribute="centerX" secondItem="X2d-ot-npN" secondAttribute="centerX" id="F1J-YB-OiG"/>
+                            <constraint firstItem="OcL-EO-QYa" firstAttribute="top" secondItem="aCN-k3-Def" secondAttribute="top" constant="282" id="HoY-jc-B3S"/>
                             <constraint firstItem="O9H-ar-GpK" firstAttribute="top" secondItem="aCN-k3-Def" secondAttribute="top" id="K5d-dh-h7A"/>
                             <constraint firstItem="X2d-ot-npN" firstAttribute="height" secondItem="Fba-w4-Rtq" secondAttribute="height" id="U8l-gl-qq4"/>
                             <constraint firstItem="X2d-ot-npN" firstAttribute="width" secondItem="Fba-w4-Rtq" secondAttribute="width" id="bPF-GV-Evk"/>
@@ -159,7 +171,6 @@
                             <constraint firstItem="O9H-ar-GpK" firstAttribute="leading" secondItem="Fba-w4-Rtq" secondAttribute="leading" id="e4c-OR-qZY"/>
                             <constraint firstItem="X2d-ot-npN" firstAttribute="top" secondItem="aCN-k3-Def" secondAttribute="top" id="i29-0k-MIK"/>
                             <constraint firstItem="O9H-ar-GpK" firstAttribute="height" secondItem="Fba-w4-Rtq" secondAttribute="height" id="uUe-XH-Sl7"/>
-                            <constraint firstItem="OcL-EO-QYa" firstAttribute="top" secondItem="opR-Io-fCc" secondAttribute="bottom" constant="30" id="xPT-ap-BCQ"/>
                             <constraint firstItem="X2d-ot-npN" firstAttribute="leading" secondItem="aCN-k3-Def" secondAttribute="leading" id="zT3-3F-CKG"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="aCN-k3-Def"/>
@@ -167,23 +178,54 @@
                     <connections>
                         <outlet property="minLabel" destination="eVX-3r-JCl" id="iRf-Gb-MeN"/>
                         <outlet property="secLabel" destination="ikY-Mi-w93" id="MKE-9D-bc4"/>
+                        <outlet property="switchButton" destination="OcL-EO-QYa" id="nii-ba-6s7"/>
                         <outlet property="tenthMinLabel" destination="EK6-3C-dMK" id="qKM-hS-bRP"/>
                         <outlet property="tenthSecLabel" destination="rSz-7P-tHI" id="P76-an-z3O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v1E-iA-vCo" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="up" id="BWg-9U-V3g" userLabel="TimeSwipeUp">
+                <swipeGestureRecognizer direction="up" id="BWg-9U-V3g" userLabel="TenthMinSwipeUp">
                     <connections>
                         <action selector="onSwipeLabelUp:" destination="Gkh-5A-bjG" id="mId-ku-cEH"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="down" id="Icq-dR-KjG" userLabel="TimeSwipeDown">
+                <swipeGestureRecognizer direction="down" id="Icq-dR-KjG" userLabel="TenthMinSwipeDown">
                     <connections>
                         <action selector="onSwipeLabelDown:" destination="Gkh-5A-bjG" id="h26-PP-50L"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="cwm-Ef-cFD" userLabel="MinSwipeUp">
+                    <connections>
+                        <action selector="onSwipeLabelUp:" destination="Gkh-5A-bjG" id="duA-y5-BZ5"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="Qwf-cM-6aJ" userLabel="MinSwipeDown">
+                    <connections>
+                        <action selector="onSwipeLabelDown:" destination="Gkh-5A-bjG" id="F8X-6d-79j"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="yT0-Pe-j4f" userLabel="TenthSecSwipeUp">
+                    <connections>
+                        <action selector="onSwipeLabelUp:" destination="Gkh-5A-bjG" id="97D-gM-p2f"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="liY-sT-qAO" userLabel="TenthSecSwipeDown">
+                    <connections>
+                        <action selector="onSwipeLabelDown:" destination="Gkh-5A-bjG" id="7Cq-qG-JPo"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="up" id="9O4-GU-Q0z" userLabel="SecSwipeUp">
+                    <connections>
+                        <action selector="onSwipeLabelUp:" destination="Gkh-5A-bjG" id="niw-JK-sr6"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="Eew-ZZ-YpV" userLabel="SecSwipeDown">
+                    <connections>
+                        <action selector="onSwipeLabelDown:" destination="Gkh-5A-bjG" id="fUW-ex-HsW"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="38.23088455772114" y="24.800000000000001"/>
+            <point key="canvasLocation" x="38.0859375" y="24.21875"/>
         </scene>
     </scenes>
 </document>
