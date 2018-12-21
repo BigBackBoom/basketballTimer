@@ -4,21 +4,49 @@
 //
 
 import Foundation
+import UIKit
 
 class TimerViewPresenter: TimerPresenterProtocol {
 
+    enum PresenterTimerStatus {
+        case TimerReady
+        case TimerCounting
+        case TimerStopped
+        case TimerRinging
+    }
+
     private let delegate: TimerUIDelegate
+    private var timerModel: TimerModel = TimerModel()
 
     required init(delegate: TimerUIDelegate) {
         self.delegate = delegate
     }
 
-    func startTimer() {
+    func startTimer(_ time: Int) {
+        delegate.updateButton("Stop", UIColor.buttonDisabledColor())
+    }
 
+    func resumeTimer() {
+        delegate.updateButton("Stop", UIColor.buttonDisabledColor())
     }
 
     func stopTimer() {
+        delegate.updateButton("Start", UIColor.buttonEnabledColor())
+    }
 
+    func getTimerState() -> TimerViewPresenter.PresenterTimerStatus {
+
+        var status = TimerViewPresenter.PresenterTimerStatus.TimerReady
+
+        switch timerModel.getTimerStatus() {
+        case .TimerCounting:
+            status = TimerViewPresenter.PresenterTimerStatus.TimerCounting
+        case .TimerStopped:
+            status = TimerViewPresenter.PresenterTimerStatus.TimerStopped
+        default:
+            status = TimerViewPresenter.PresenterTimerStatus.TimerReady
+        }
+        return status
     }
 
     func updateTenthMin(_ time: UInt) {

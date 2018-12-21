@@ -6,8 +6,10 @@
 import Foundation
 
 protocol TimerPresenterProtocol {
-    func startTimer()
+    func startTimer(_ time: Int)
+    func resumeTimer()
     func stopTimer()
+    func getTimerState() -> TimerViewPresenter.PresenterTimerStatus
     func updateTenthMin(_ time: UInt)
     func updateMin(_ time: UInt)
     func updateTenthSec(_ time: UInt)

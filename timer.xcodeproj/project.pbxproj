@@ -57,7 +57,7 @@
 		57A5F13BF422DB4E13152A85 /* TimerUIDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerUIDelegate.swift; sourceTree = "<group>"; };
 		57A5F431B75D2840BBF49D09 /* timerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = timerTests.swift; sourceTree = "<group>"; };
 		57A5F4D31F331D5917DE6D71 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
-		57A5F61AC49F71C4662C544A /* timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = timer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		57A5F61AC49F71C4662C544A /* Sefo Timer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sefo Timer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57A5F92D98D5680BEB00FA9C /* TimerPresenterProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerPresenterProtocol.swift; sourceTree = "<group>"; };
 		57A5F9BB790F87DCDC90D78B /* timerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = timerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		57A5FA1F002923DFA7157044 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,7 +101,7 @@
 		57A5F078C71F7B2543BF3226 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				57A5F61AC49F71C4662C544A /* timer.app */,
+				57A5F61AC49F71C4662C544A /* Sefo Timer.app */,
 				57A5F9BB790F87DCDC90D78B /* timerTests.xctest */,
 			);
 			name = Products;
@@ -234,9 +234,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		57A5F02338C06E41623C8DAC /* timer */ = {
+		57A5F02338C06E41623C8DAC /* Sefo Timer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 57A5F1CAA734457F5548C03B /* Build configuration list for PBXNativeTarget "timer" */;
+			buildConfigurationList = 57A5F1CAA734457F5548C03B /* Build configuration list for PBXNativeTarget "Sefo Timer" */;
 			buildPhases = (
 				57A5F033106A663F1993BAF2 /* Sources */,
 				57A5F48B1448BFE7B5AE87C2 /* Frameworks */,
@@ -247,9 +247,9 @@
 			);
 			dependencies = (
 			);
-			name = timer;
+			name = "Sefo Timer";
 			productName = timer;
-			productReference = 57A5F61AC49F71C4662C544A /* timer.app */;
+			productReference = 57A5F61AC49F71C4662C544A /* Sefo Timer.app */;
 			productType = "com.apple.product-type.application";
 		};
 		57A5F4EDD4F3AD40516C0D7C /* timerTests */ = {
@@ -295,7 +295,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				57A5F02338C06E41623C8DAC /* timer */,
+				57A5F02338C06E41623C8DAC /* Sefo Timer */,
 				57A5F4EDD4F3AD40516C0D7C /* timerTests */,
 			);
 		};
@@ -356,7 +356,7 @@
 /* Begin PBXTargetDependency section */
 		57A5F040F07DB46AC11FB8B9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 57A5F02338C06E41623C8DAC /* timer */;
+			target = 57A5F02338C06E41623C8DAC /* Sefo Timer */;
 			targetProxy = 57A5F35AFE73B03914E4156D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -391,6 +391,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = timer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sakazuki.timer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -458,7 +459,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -518,7 +519,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -552,6 +553,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = timer/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sakazuki.timer;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -563,7 +565,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		57A5F1CAA734457F5548C03B /* Build configuration list for PBXNativeTarget "timer" */ = {
+		57A5F1CAA734457F5548C03B /* Build configuration list for PBXNativeTarget "Sefo Timer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				57A5FF9C206429C6C971EDE9 /* Debug */,

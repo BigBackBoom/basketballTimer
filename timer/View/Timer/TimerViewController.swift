@@ -75,6 +75,32 @@ class TimerViewController: UIViewController {
         }
     }
 
+    @IBAction func onSwitchButtonClick(_ sender: Any) {
+
+        let status = timerViewPresenter?.getTimerState() ?? TimerViewPresenter.PresenterTimerStatus.TimerReady
+
+        let tenMin = Int(tenthMinLabel.text ?? "0") ?? 0
+        let min = Int(minLabel.text ?? "0") ?? 0
+        let tenSec = Int(tenthSecLabel.text ?? "0") ?? 0
+        let sec = Int(secLabel.text ?? "0") ?? 0
+        let time = (tenMin * 600) + (min * 60) + (tenSec * 10) + (sec) * 1000
+
+        switch status {
+
+        case TimerViewPresenter.PresenterTimerStatus.TimerReady:
+            timerViewPresenter?.startTimer(time)
+
+        case TimerViewPresenter.PresenterTimerStatus.TimerStopped:
+            timerViewPresenter?.resumeTimer()
+
+        case TimerViewPresenter.PresenterTimerStatus.TimerCounting:
+            timerViewPresenter?.stopTimer()
+
+        default:
+            timerViewPresenter?.startTimer(time)
+        }
+    }
+
     private func setTimer(_ tag: Int, _ time: UInt) {
         switch tag {
         case TimeLabelTag.tenthMinLabel.rawValue:
@@ -109,4 +135,8 @@ extension TimerViewController: TimerUIDelegate {
         secLabel.text = str
     }
 
+    func updateButton(_ str: String, _ color: UIColor) {
+        switchButton.setTitle(str, for: .normal)
+        switchButton.setTitleColor(color, for: .normal)
+    }
 }
