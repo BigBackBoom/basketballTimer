@@ -22,15 +22,27 @@ class TimerViewPresenter: TimerPresenterProtocol {
         self.delegate = delegate
     }
 
-    func startTimer(_ time: Int) {
+    func startTimer() {
+        timerModel.startTimer(onComplete: { time in
+            self.countDown(time: time)
+        }, onError: { error in
+            debugPrint(error)
+        })
+
         delegate.updateButton("Stop", UIColor.buttonDisabledColor())
     }
 
     func resumeTimer() {
+        timerModel.startTimer(onComplete: { time in
+            self.countDown(time: time)
+        }, onError: { error in
+            debugPrint(error)
+        })
         delegate.updateButton("Stop", UIColor.buttonDisabledColor())
     }
 
     func stopTimer() {
+        timerModel.stopTimer()
         delegate.updateButton("Start", UIColor.buttonEnabledColor())
     }
 
@@ -49,24 +61,53 @@ class TimerViewPresenter: TimerPresenterProtocol {
         return status
     }
 
-    func updateTenthMin(_ time: UInt) {
+    func updateTimeLabel(time: Int) {
+
+        let minutes = Int(time / 60)
+        let second = Int(time) % 60
+
+        let tenthMinDisplay = minutes / 10
+        let minDisplay = minutes % 10
+        let tenthSecDisplay = second / 10
+        let secDisplay = second % 10
+
+        self.updateTenthMin(tenthMinDisplay)
+        self.updateMin(minDisplay)
+        self.updateTenthSec(tenthSecDisplay)
+        self.updateSec(secDisplay)
+    }
+
+    func updateTenthMin(_ time: Int) {
         let tenthMinString = String(time)
+        timerModel.timerLabel.tenthMin = tenthMinString
         delegate.updateTenthMin(tenthMinString)
     }
 
-    func updateMin(_ time: UInt) {
-        let tenthMinString = String(time)
-        delegate.updateMin(tenthMinString)
+    func updateMin(_ time: Int) {
+        let minString = String(time)
+        timerModel.timerLabel.min = minString
+        delegate.updateMin(minString)
     }
 
-    func updateTenthSec(_ time: UInt) {
-        let tenthMinString = String(time)
-        delegate.updateTenthSec(tenthMinString)
+    func updateTenthSec(_ time: Int) {
+        let tenthSecString = String(time)
+        timerModel.timerLabel.tenthSec = tenthSecString
+        delegate.updateTenthSec(tenthSecString)
     }
 
-    func updateSec(_ time: UInt) {
-        let tenthMinString = String(time)
-        delegate.updateSec(tenthMinString)
+    func updateSec(_ time: Int) {
+        let secString = String(time)
+        timerModel.timerLabel.sec = secString
+        delegate.updateSec(secString)
+    }
+    
+    private func countDown(time : Int){
+        self.updateTimeLabel(time: time)
+        
+        if (time <= 0) {
+            self.timerModel.resetTimer()
+            self.delegate.updateButton("Start", UIColor.buttonEnabledColor())
+        }
     }
 
 }

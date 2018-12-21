@@ -39,6 +39,11 @@ class TimerViewController: UIViewController {
         }
     }
 
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        timerViewPresenter?.stopTimer()
+    }
+
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         var orientation: UIInterfaceOrientationMask
 
@@ -56,7 +61,7 @@ class TimerViewController: UIViewController {
     @IBAction func onSwipeLabelUp(_ sender: UISwipeGestureRecognizer) {
         if sender.view is UILabel {
             let label = sender.view as! UILabel
-            var min = UInt(label.text ?? "0") ?? 0
+            var min = Int(label.text ?? "0") ?? 0
             if (min < 99) {
                 min = min + 1
                 setTimer(label.tag, min)
@@ -67,7 +72,7 @@ class TimerViewController: UIViewController {
     @IBAction func onSwipeLabelDown(_ sender: UISwipeGestureRecognizer) {
         if sender.view is UILabel {
             let label = sender.view as! UILabel
-            var min = UInt(label.text ?? "0") ?? 0
+            var min = Int(label.text ?? "0") ?? 0
             if (min > 0) {
                 min = min - 1
                 setTimer(label.tag, min)
@@ -78,17 +83,10 @@ class TimerViewController: UIViewController {
     @IBAction func onSwitchButtonClick(_ sender: Any) {
 
         let status = timerViewPresenter?.getTimerState() ?? TimerViewPresenter.PresenterTimerStatus.TimerReady
-
-        let tenMin = Int(tenthMinLabel.text ?? "0") ?? 0
-        let min = Int(minLabel.text ?? "0") ?? 0
-        let tenSec = Int(tenthSecLabel.text ?? "0") ?? 0
-        let sec = Int(secLabel.text ?? "0") ?? 0
-        let time = (tenMin * 600) + (min * 60) + (tenSec * 10) + (sec) * 1000
-
         switch status {
 
         case TimerViewPresenter.PresenterTimerStatus.TimerReady:
-            timerViewPresenter?.startTimer(time)
+            timerViewPresenter?.startTimer()
 
         case TimerViewPresenter.PresenterTimerStatus.TimerStopped:
             timerViewPresenter?.resumeTimer()
@@ -97,11 +95,11 @@ class TimerViewController: UIViewController {
             timerViewPresenter?.stopTimer()
 
         default:
-            timerViewPresenter?.startTimer(time)
+            timerViewPresenter?.startTimer()
         }
     }
 
-    private func setTimer(_ tag: Int, _ time: UInt) {
+    private func setTimer(_ tag: Int, _ time: Int) {
         switch tag {
         case TimeLabelTag.tenthMinLabel.rawValue:
             timerViewPresenter?.updateTenthMin(time)
