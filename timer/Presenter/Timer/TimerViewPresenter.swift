@@ -17,6 +17,9 @@ class TimerViewPresenter: TimerPresenterProtocol {
     private let delegate: TimerUIDelegate
     private var timerModel: TimerModel = TimerModel()
 
+    private var soundPlayModel: SoundPlayModel = SoundPlayModel()
+
+
     required init(delegate: TimerUIDelegate) {
         self.delegate = delegate
     }
@@ -108,6 +111,7 @@ class TimerViewPresenter: TimerPresenterProtocol {
         self.updateTimeLabel(time: time)
 
         if (time <= 0) {
+            soundPlayModel.playSounds(SoundPlayModel.Sounds.buzzer)
             self.timerModel.resetTimer()
             self.delegate.updateButton("Start", UIColor.buttonEnabledColor())
         }
