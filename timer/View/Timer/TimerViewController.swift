@@ -16,6 +16,9 @@ class TimerViewController: UIViewController {
         case tenthSecLabel = 2
         case secLabel = 3
     }
+    
+    private let labelMax = 9
+    private let labelMin = 0
 
     @IBOutlet weak var tenthMinLabel: UILabel!
     @IBOutlet weak var minLabel: UILabel!
@@ -61,22 +64,26 @@ class TimerViewController: UIViewController {
     @IBAction func onSwipeLabelUp(_ sender: UISwipeGestureRecognizer) {
         if sender.view is UILabel {
             let label = sender.view as! UILabel
-            var min = Int(label.text ?? "0") ?? 0
-            if (min < 99) {
-                min = min + 1
-                setTimer(label.tag, min)
+            var time = Int(label.text ?? "0") ?? 0
+            if (time < labelMax) {
+                time += 1
+            } else {
+                time = labelMin
             }
+            setTimer(label.tag, time)
         }
     }
 
     @IBAction func onSwipeLabelDown(_ sender: UISwipeGestureRecognizer) {
         if sender.view is UILabel {
             let label = sender.view as! UILabel
-            var min = Int(label.text ?? "0") ?? 0
-            if (min > 0) {
-                min = min - 1
-                setTimer(label.tag, min)
+            var time = Int(label.text ?? "0") ?? 0
+            if (time > labelMin) {
+                time -= 1
+            } else {
+                time = labelMax
             }
+            setTimer(label.tag, time)
         }
     }
 
