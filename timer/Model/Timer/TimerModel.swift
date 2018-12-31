@@ -24,14 +24,10 @@ class TimerModel {
     }
 
     var timerLabel = TimerLabel()
+    var timerState = TimerStatus.TimerReady
 
     private var disposable: Disposable? = nil
-    private var timerState = TimerStatus.TimerReady
     private var time = 0
-
-    func getTimerStatus() -> TimerStatus {
-        return timerState
-    }
 
     func startTimer(onComplete: @escaping (Int) -> Void, onError: @escaping (Error) -> Void) {
 
@@ -40,11 +36,11 @@ class TimerModel {
         let tenSec = Int(timerLabel.tenthSec) ?? 0
         let sec = Int(timerLabel.sec) ?? 0
         time = ((tenMin * 600) + (min * 60) + (tenSec * 10) + (sec)) * 1000
-        
+
         TimerCountStart(onComplete: onComplete, onError: onError)
     }
-    
-    func resumeTimer(onComplete: @escaping (Int) -> Void, onError: @escaping (Error) -> Void){
+
+    func resumeTimer(onComplete: @escaping (Int) -> Void, onError: @escaping (Error) -> Void) {
         TimerCountStart(onComplete: onComplete, onError: onError)
     }
 
@@ -57,23 +53,23 @@ class TimerModel {
         disposable?.dispose()
         timerState = TimerStatus.TimerStopped
     }
-    
-    private func TimerCountStart(onComplete: @escaping (Int) -> Void, onError: @escaping (Error) -> Void){
+
+    private func TimerCountStart(onComplete: @escaping (Int) -> Void, onError: @escaping (Error) -> Void) {
         let backgroundScheduler = SerialDispatchQueueScheduler(qos: .default)
         disposable = Observable<Int>.interval(interval, scheduler: backgroundScheduler)
-            .startWith(time)
-            .observeOn(MainScheduler.instance)
-            .map { time in
-                self.time -=  100
-                return self.time / 1000
-            }.do(onSubscribe: {
-                self.timerState = TimerStatus.TimerCounting
-            }).subscribe(onNext: { timer in
-                onComplete(timer)
-            }, onError: { error in
-                debugPrint("error at time interval")
-                onError(error)
-            })
+                .startWith(time)
+                .observeOn(MainScheduler.instance)
+                .map { time in
+                    self.time -= 100
+                    return self.time / 1000
+                }.do(onSubscribe: {
+                    self.timerState = TimerStatus.TimerCounting
+                }).subscribe(onNext: { timer in
+                    onComplete(timer)
+                }, onError: { error in
+                    debugPrint("error at time interval")
+                    onError(error)
+                })
     }
 
 }

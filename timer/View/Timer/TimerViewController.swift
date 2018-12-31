@@ -93,9 +93,6 @@ class TimerViewController: UIViewController {
 
         case TimerViewPresenter.PresenterTimerStatus.TimerCounting:
             timerViewPresenter?.stopTimer()
-
-        default:
-            timerViewPresenter?.startTimer()
         }
     }
 
@@ -112,6 +109,7 @@ class TimerViewController: UIViewController {
         default:
             break;
         }
+        timerViewPresenter?.resetTimerState()
     }
 }
 

@@ -12,7 +12,6 @@ class TimerViewPresenter: TimerPresenterProtocol {
         case TimerReady
         case TimerCounting
         case TimerStopped
-        case TimerRinging
     }
 
     private let delegate: TimerUIDelegate
@@ -46,11 +45,15 @@ class TimerViewPresenter: TimerPresenterProtocol {
         delegate.updateButton("Start", UIColor.buttonEnabledColor())
     }
 
+    func resetTimerState() {
+        timerModel.timerState = .TimerReady
+    }
+
     func getTimerState() -> TimerViewPresenter.PresenterTimerStatus {
 
         var status = TimerViewPresenter.PresenterTimerStatus.TimerReady
 
-        switch timerModel.getTimerStatus() {
+        switch timerModel.timerState {
         case .TimerCounting:
             status = TimerViewPresenter.PresenterTimerStatus.TimerCounting
         case .TimerStopped:
@@ -100,10 +103,10 @@ class TimerViewPresenter: TimerPresenterProtocol {
         timerModel.timerLabel.sec = secString
         delegate.updateSec(secString)
     }
-    
-    private func countDown(time : Int){
+
+    private func countDown(time: Int) {
         self.updateTimeLabel(time: time)
-        
+
         if (time <= 0) {
             self.timerModel.resetTimer()
             self.delegate.updateButton("Start", UIColor.buttonEnabledColor())
