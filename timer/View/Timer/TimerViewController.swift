@@ -16,7 +16,7 @@ class TimerViewController: UIViewController {
         case tenthSecLabel = 2
         case secLabel = 3
     }
-    
+
     private let labelMax = 9
     private let labelMin = 0
 
@@ -62,6 +62,12 @@ class TimerViewController: UIViewController {
     }
 
     @IBAction func onSwipeLabelUp(_ sender: UISwipeGestureRecognizer) {
+
+        let status = timerViewPresenter?.getTimerState() ?? TimerViewPresenter.PresenterTimerStatus.TimerReady
+        if (status == .TimerCounting) {
+            return
+        }
+
         if sender.view is UILabel {
             let label = sender.view as! UILabel
             var time = Int(label.text ?? "0") ?? 0
@@ -75,6 +81,12 @@ class TimerViewController: UIViewController {
     }
 
     @IBAction func onSwipeLabelDown(_ sender: UISwipeGestureRecognizer) {
+
+        let status = timerViewPresenter?.getTimerState() ?? TimerViewPresenter.PresenterTimerStatus.TimerReady
+        if (status == .TimerCounting) {
+            return
+        }
+
         if sender.view is UILabel {
             let label = sender.view as! UILabel
             var time = Int(label.text ?? "0") ?? 0
@@ -88,7 +100,15 @@ class TimerViewController: UIViewController {
     }
 
     @IBAction func onSwitchButtonClick(_ sender: Any) {
+        startTimerActions()
+    }
 
+
+    @IBAction func onLabelAreaTap(_ sender: Any) {
+        startTimerActions()
+    }
+
+    private func startTimerActions() {
         let status = timerViewPresenter?.getTimerState() ?? TimerViewPresenter.PresenterTimerStatus.TimerReady
         switch status {
 
