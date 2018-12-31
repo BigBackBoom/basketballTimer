@@ -27,6 +27,7 @@
 		E900FD4821B18447001D5CC1 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E900FD4721B18447001D5CC1 /* TimerViewController.swift */; };
 		E900FD4C21B22396001D5CC1 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E900FD4A21B2233C001D5CC1 /* RxSwift.framework */; };
 		E900FD4E21B223FC001D5CC1 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E900FD4A21B2233C001D5CC1 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E9B8BE4621D9F3890077D86A /* SoundPlayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B8BE4521D9F3890077D86A /* SoundPlayModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		E900FD0B21AC2205001D5CC1 /* UIColors+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+Util.swift"; sourceTree = "<group>"; };
 		E900FD4721B18447001D5CC1 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		E900FD4A21B2233C001D5CC1 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		E9B8BE4521D9F3890077D86A /* SoundPlayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +171,7 @@
 		E900FCEA21AC16E7001D5CC1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E9B8BE4421D9EA400077D86A /* Util */,
 				57A5F8B94FD1F1F022613F36 /* Timer */,
 			);
 			path = Model;
@@ -229,6 +232,14 @@
 				57A5F92D98D5680BEB00FA9C /* TimerPresenterProtocol.swift */,
 			);
 			path = Timer;
+			sourceTree = "<group>";
+		};
+		E9B8BE4421D9EA400077D86A /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				E9B8BE4521D9F3890077D86A /* SoundPlayModel.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -340,6 +351,7 @@
 				57A5FB4AFC7C9C55B669D442 /* TimerModel.swift in Sources */,
 				57A5F33A7BFF7DDDA01F317D /* TimerUIDelegate.swift in Sources */,
 				57A5F47E5D6F8B347FA64A5E /* TimerPresenterProtocol.swift in Sources */,
+				E9B8BE4621D9F3890077D86A /* SoundPlayModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
