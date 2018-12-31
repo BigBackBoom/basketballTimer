@@ -109,6 +109,11 @@ class TimerViewController: UIViewController {
     }
 
     private func startTimerActions() {
+
+        if (tenthMinLabel.text == "0" && minLabel.text == "0" && tenthSecLabel.text == "0" && secLabel.text == "0" ) {
+            return
+        }
+
         let status = timerViewPresenter?.getTimerState() ?? TimerViewPresenter.PresenterTimerStatus.TimerReady
         switch status {
 
