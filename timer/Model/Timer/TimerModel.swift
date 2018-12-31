@@ -57,7 +57,7 @@ class TimerModel {
     private func TimerCountStart(onComplete: @escaping (Int) -> Void, onError: @escaping (Error) -> Void) {
         let backgroundScheduler = SerialDispatchQueueScheduler(qos: .default)
         disposable = Observable<Int>.interval(interval, scheduler: backgroundScheduler)
-                .startWith(time)
+                .startWith(0)
                 .observeOn(MainScheduler.instance)
                 .map { time in
                     self.time -= 100
