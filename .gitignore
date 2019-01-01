@@ -2,6 +2,7 @@
 
 ## Various settings
 .idea/*
+xcuserdata
 
 ## Carthage
 Carthage/*
