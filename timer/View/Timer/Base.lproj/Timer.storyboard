@@ -204,6 +204,7 @@
                     <connections>
                         <outlet property="minLabel" destination="eVX-3r-JCl" id="iRf-Gb-MeN"/>
                         <outlet property="secLabel" destination="ikY-Mi-w93" id="MKE-9D-bc4"/>
+                        <outlet property="separatorLabel" destination="opR-Io-fCc" id="aFC-c2-EkN"/>
                         <outlet property="switchButton" destination="OcL-EO-QYa" id="nii-ba-6s7"/>
                         <outlet property="tenthMinLabel" destination="EK6-3C-dMK" id="qKM-hS-bRP"/>
                         <outlet property="tenthSecLabel" destination="rSz-7P-tHI" id="P76-an-z3O"/>

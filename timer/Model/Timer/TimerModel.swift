@@ -8,7 +8,7 @@ import RxSwift
 
 class TimerModel {
 
-    let interval = 0.1
+    let interval = 0.01
 
     enum TimerStatus {
         case TimerReady
@@ -21,6 +21,8 @@ class TimerModel {
         var min: String = "0"
         var tenthSec: String = "0"
         var sec: String = "0"
+        var deciSec: String = "0"
+        var centiSec: String = "0"
     }
 
     var timerLabel = TimerLabel()
@@ -59,13 +61,25 @@ class TimerModel {
         disposable = Observable<Int>.interval(interval, scheduler: backgroundScheduler)
                 .startWith(0)
                 .observeOn(MainScheduler.instance)
-                .map { time in
-                    self.time -= 100
-                    return self.time / 1000
+                .map { (timer) -> Int in
+                    self.time -= 10
+                    return self.time
                 }.do(onSubscribe: {
                     self.timerState = TimerStatus.TimerCounting
-                }).subscribe(onNext: { timer in
-                    onComplete(timer)
+                }).subscribe(onNext: { time in
+                    let convertedTime = time / 1000
+                    let minutes = Int(convertedTime / 60)
+                    let second = Int(convertedTime) % 60
+                    let milliSec = time % 1000
+
+                    self.timerLabel.tenthMin = String(minutes / 10)
+                    self.timerLabel.min = String(minutes % 10)
+                    self.timerLabel.tenthSec = String(second / 10)
+                    self.timerLabel.sec = String(second % 10)
+                    self.timerLabel.deciSec = String(milliSec / 100)
+                    self.timerLabel.centiSec = String((milliSec % 100) / 10)
+
+                    onComplete(time)
                 }, onError: { error in
                     debugPrint("error at time interval")
                     onError(error)

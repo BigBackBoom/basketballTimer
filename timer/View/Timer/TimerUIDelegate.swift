@@ -12,5 +12,6 @@ protocol TimerUIDelegate {
     func updateMin(_ str: String)
     func updateTenthSec(_ str: String)
     func updateSec(_ str: String)
+    func updateSeparator(_ str: String)
     func updateButton(_ str: String, _ color: UIColor)
 }

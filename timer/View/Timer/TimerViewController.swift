@@ -25,7 +25,8 @@ class TimerViewController: UIViewController {
     @IBOutlet weak var tenthSecLabel: UILabel!
     @IBOutlet weak var secLabel: UILabel!
     @IBOutlet weak var switchButton: UIButton!
-
+    @IBOutlet weak var separatorLabel: UILabel!
+    
     private var prevOrientation = UIInterfaceOrientationMask.landscapeLeft
     private var timerViewPresenter: TimerPresenterProtocol? = nil
 
@@ -161,6 +162,10 @@ extension TimerViewController: TimerUIDelegate {
 
     func updateSec(_ str: String) {
         secLabel.text = str
+    }
+
+    func updateSeparator(_ str: String) {
+        separatorLabel.text = str
     }
 
     func updateButton(_ str: String, _ color: UIColor) {

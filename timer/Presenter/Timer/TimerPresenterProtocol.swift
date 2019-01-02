@@ -15,4 +15,5 @@ protocol TimerPresenterProtocol {
     func updateMin(_ time: Int)
     func updateTenthSec(_ time: Int)
     func updateSec(_ time: Int)
+    func updateSeparator(_ str: String)
 }
