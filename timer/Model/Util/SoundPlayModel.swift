@@ -8,18 +8,18 @@
 
 import AVFoundation
 import UIKit
+import RxSwift
 
 class SoundPlayModel {
-
-//    private let fileType = "m4a"
 
     enum Sounds: String {
         case buzzer = "buzzer"
     }
 
     var player: AVAudioPlayer? = nil
-    
-    func setSound(soundToPlay sound : Sounds){
+    let disposeBag = DisposeBag()
+
+    func setSound(soundToPlay sound: Sounds) {
         if let asset = NSDataAsset(name: sound.rawValue) {
             self.player = try? AVAudioPlayer(data: asset.data)
             self.player?.prepareToPlay()
@@ -27,7 +27,15 @@ class SoundPlayModel {
     }
 
     func playSounds() {
-        self.player?.play()
+        let backgroundScheduler = SerialDispatchQueueScheduler(qos: .default)
+        Single<Bool>.create(subscribe: { [weak self] singleEvent -> Disposable in
+                    self?.player?.play()
+                    singleEvent(.success(true))
+                    return Disposables.create()
+                })
+                .subscribeOn(backgroundScheduler)
+                .subscribe()
+                .disposed(by: disposeBag)
     }
 
     func stopSounds() {
