@@ -13,7 +13,7 @@ class TimerViewPresenter: TimerPresenterProtocol {
         case TimerCounting
         case TimerStopped
     }
-    
+
     private let minConvert = 60000
 
     private let delegate: TimerUIDelegate
@@ -120,10 +120,12 @@ class TimerViewPresenter: TimerPresenterProtocol {
         self.updateTimeLabel(isSecCountEnabled: true)
 
         if (time <= 0) {
-            soundPlayModel.playSounds(SoundPlayModel.Sounds.buzzer)
+            soundPlayModel.playSounds()
             self.timerModel.resetTimer()
             self.delegate.updateButton("Start", UIColor.buttonEnabledColor())
             self.updateSeparator(":")
+        } else if(time == 1000){
+            soundPlayModel.setSound(soundToPlay: SoundPlayModel.Sounds.buzzer)
         }
     }
 

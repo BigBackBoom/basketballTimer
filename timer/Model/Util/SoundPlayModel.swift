@@ -18,12 +18,16 @@ class SoundPlayModel {
     }
 
     var player: AVAudioPlayer? = nil
-
-    func playSounds(_ sounds: Sounds) {
-        if let asset = NSDataAsset(name: sounds.rawValue) {
+    
+    func setSound(soundToPlay sound : Sounds){
+        if let asset = NSDataAsset(name: sound.rawValue) {
             self.player = try? AVAudioPlayer(data: asset.data)
-            self.player?.play()
+            self.player?.prepareToPlay()
         }
+    }
+
+    func playSounds() {
+        self.player?.play()
     }
 
     func stopSounds() {
