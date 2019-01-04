@@ -9,8 +9,9 @@ protocol TimerPresenterProtocol {
     func startTimer()
     func resumeTimer()
     func stopTimer()
-    func resetTimerState()
+    func resetTimer()
     func getTimerState() -> TimerViewPresenter.PresenterTimerStatus
+    func updateTimeLabel(isSecCountEnabled isEnabled: Bool)
     func updateTenthMin(_ time: Int)
     func updateMin(_ time: Int)
     func updateTenthSec(_ time: Int)

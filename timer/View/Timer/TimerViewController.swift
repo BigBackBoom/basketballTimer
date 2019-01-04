@@ -33,6 +33,7 @@ class TimerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         timerViewPresenter = TimerViewPresenter(delegate: self)
+        switchButton.titleLabel?.adjustsFontSizeToFitWidth = true
     }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
@@ -65,7 +66,7 @@ class TimerViewController: UIViewController {
     @IBAction func onSwipeLabelUp(_ sender: UISwipeGestureRecognizer) {
 
         let status = timerViewPresenter?.getTimerState() ?? TimerViewPresenter.PresenterTimerStatus.TimerReady
-        if (status == .TimerCounting) {
+        if (status == .TimerCounting || status == .TimerStopped) {
             return
         }
 
@@ -84,7 +85,7 @@ class TimerViewController: UIViewController {
     @IBAction func onSwipeLabelDown(_ sender: UISwipeGestureRecognizer) {
 
         let status = timerViewPresenter?.getTimerState() ?? TimerViewPresenter.PresenterTimerStatus.TimerReady
-        if (status == .TimerCounting) {
+        if (status == .TimerCounting || status == .TimerStopped) {
             return
         }
 
@@ -108,6 +109,10 @@ class TimerViewController: UIViewController {
     @IBAction func onLabelAreaTap(_ sender: Any) {
         startTimerActions()
     }
+    
+    @IBAction func onResetButtonClick(_ sender: Any) {
+        timerViewPresenter?.resetTimer()
+    }
 
     private func startTimerActions() {
 
@@ -128,6 +133,8 @@ class TimerViewController: UIViewController {
             timerViewPresenter?.stopTimer()
         }
     }
+    
+    
 
     private func setTimer(_ tag: Int, _ time: Int) {
         switch tag {
@@ -142,7 +149,6 @@ class TimerViewController: UIViewController {
         default:
             break;
         }
-        timerViewPresenter?.resetTimerState()
     }
 }
 

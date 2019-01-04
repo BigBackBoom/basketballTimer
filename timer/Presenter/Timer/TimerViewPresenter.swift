@@ -48,11 +48,19 @@ class TimerViewPresenter: TimerPresenterProtocol {
     func stopTimer() {
         timerModel.stopTimer()
         delegate.updateButton("Start", UIColor.buttonEnabledColor())
-        updateTimeLabel(isSecCountEnabled: false)
+        updateTimeLabel(isSecCountEnabled: true)
     }
 
-    func resetTimerState() {
-        timerModel.timerState = .TimerReady
+    func resetTimer() {
+        self.timerModel.resetTimer()
+        timerModel.timerLabel.tenthMin = "0"
+        timerModel.timerLabel.min = "0"
+        timerModel.timerLabel.tenthSec = "0"
+        timerModel.timerLabel.sec = "0"
+        timerModel.timerLabel.deciSec = "0"
+        timerModel.timerLabel.centiSec = "0"
+        delegate.updateButton("Start", UIColor.buttonEnabledColor())
+        updateTimeLabel(isSecCountEnabled: false)
     }
 
     func getTimerState() -> TimerViewPresenter.PresenterTimerStatus {

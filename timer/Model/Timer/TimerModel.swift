@@ -8,7 +8,7 @@ import RxSwift
 
 class TimerModel {
 
-    let interval = 0.01
+    let interval = 0.1
 
     enum TimerStatus {
         case TimerReady
@@ -53,7 +53,7 @@ class TimerModel {
 
     func resetTimer() {
         disposable?.dispose()
-        timerState = TimerStatus.TimerStopped
+        timerState = TimerStatus.TimerReady
     }
 
     private func TimerCountStart(onComplete: @escaping (Int) -> Void, onError: @escaping (Error) -> Void) {
@@ -62,7 +62,7 @@ class TimerModel {
                 .startWith(0)
                 .observeOn(MainScheduler.instance)
                 .map { (timer) -> Int in
-                    self.time -= 10
+                    self.time -= 100
                     return self.time
                 }.do(onSubscribe: {
                     self.timerState = TimerStatus.TimerCounting
