@@ -20,10 +20,17 @@ class SoundPlayModel {
     let disposeBag = DisposeBag()
 
     func setSound(soundToPlay sound: Sounds) {
-        if let asset = NSDataAsset(name: sound.rawValue) {
-            self.player = try? AVAudioPlayer(data: asset.data)
-            self.player?.prepareToPlay()
-        }
+        let backgroundScheduler = SerialDispatchQueueScheduler(qos: .default)
+        Single<Bool>.create(subscribe: { [weak self] singleEvent -> Disposable in
+                    if let asset = NSDataAsset(name: sound.rawValue) {
+                        self?.player = try? AVAudioPlayer(data: asset.data)
+                        self?.player?.prepareToPlay()
+                    }
+                    return Disposables.create()
+                })
+                .subscribeOn(backgroundScheduler)
+                .subscribe()
+                .disposed(by: disposeBag)
     }
 
     func playSounds() {
