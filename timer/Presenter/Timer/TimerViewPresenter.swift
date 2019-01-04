@@ -73,11 +73,16 @@ class TimerViewPresenter: TimerPresenterProtocol {
     func updateTimeLabel(isSecCountEnabled isEnabled: Bool) {
 
         if(timerModel.timerLabel.tenthMin == "0" && timerModel.timerLabel.min == "0" && isEnabled){
-            delegate.updateTenthMin(timerModel.timerLabel.tenthSec)
+
+            if(timerModel.timerLabel.tenthSec != "0"){
+                delegate.updateTenthMin(timerModel.timerLabel.tenthSec)
+            } else {
+                delegate.updateTenthMin("")
+            }
             delegate.updateMin(timerModel.timerLabel.sec)
-            delegate.updateTenthSec(timerModel.timerLabel.deciSec)
-            delegate.updateSec(timerModel.timerLabel.centiSec)
             delegate.updateSeparator(".")
+            delegate.updateTenthSec(timerModel.timerLabel.deciSec)
+            delegate.updateSec("")
 
         } else {
             delegate.updateTenthMin(timerModel.timerLabel.tenthMin)
@@ -117,15 +122,17 @@ class TimerViewPresenter: TimerPresenterProtocol {
     }
 
     private func countDown(time: Int) {
-        self.updateTimeLabel(isSecCountEnabled: true)
 
         if (time <= 0) {
             soundPlayModel.playSounds()
             self.timerModel.resetTimer()
             self.delegate.updateButton("Start", UIColor.buttonEnabledColor())
-            self.updateSeparator(":")
+            self.updateTimeLabel(isSecCountEnabled: false)
         } else if(time == 1000){
             soundPlayModel.setSound(soundToPlay: SoundPlayModel.Sounds.buzzer)
+            self.updateTimeLabel(isSecCountEnabled: true)
+        } else {
+            self.updateTimeLabel(isSecCountEnabled: true)
         }
     }
 
