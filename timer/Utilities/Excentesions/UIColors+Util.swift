@@ -22,4 +22,12 @@ extension UIColor {
     class func timerFontColor() -> UIColor {
         return UIColor(red: 248, green: 22, blue: 16)
     }
+    
+    class func buttonEnabledColor() -> UIColor {
+        return UIColor(red: 76, green: 217, blue: 100)
+    }
+    
+    class func buttonDisabledColor() -> UIColor {
+        return UIColor(red: 255, green: 59, blue: 48)
+    }
 }

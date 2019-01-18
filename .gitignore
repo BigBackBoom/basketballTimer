@@ -1,7 +1,12 @@
 .DS_Store
 
+## Various settings
+.idea/*
+xcuserdata
+
 ## Carthage
 Carthage/*
+
 !Carthage/Build
 Carthage/Build/*
 !Carthage/Build/iOS
