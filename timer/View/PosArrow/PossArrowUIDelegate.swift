@@ -9,6 +9,6 @@
 import Foundation
 
 protocol PossArrowUIDelegate {
-    func updateLeftArrow(_ str: String)
-    func updateRightArrow(_ str: String)
+    func updateLeftArrow(isHidden: Bool)
+    func updateRightArrow(isHidden: Bool)
 }

@@ -9,6 +9,7 @@
 import Foundation
 
 protocol PossArrowProtocol {
-    func turnOnArrow()
+    func turnOnArrow(arrowDirection: ArrowDirection)
     func switchArrow()
+    func isTurnedOn() -> Bool
 }

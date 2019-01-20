@@ -27,37 +27,39 @@
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="▶︎" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.30000001192092896" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n1K-vb-dcz" userLabel="Right Arrow Shadow">
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="▶︎" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.30000001192092896" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n1K-vb-dcz" userLabel="Right Arrow Shadow">
                     <rect key="frame" x="365" y="84" width="96" height="110.5"/>
+                    <gestureRecognizers/>
                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="96"/>
                     <color key="textColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="L3M-ox-g6z" appends="YES" id="kaE-ad-TYn"/>
+                    </connections>
                 </label>
-                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.29999999999999999" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m5i-JI-s1s">
-                    <rect key="frame" x="365" y="84" width="0.0" height="0.0"/>
+                <label hidden="YES" opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="▶︎" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.29999999999999999" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m5i-JI-s1s">
+                    <rect key="frame" x="365" y="84" width="96" height="110.5"/>
                     <gestureRecognizers/>
                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="96"/>
                     <color key="textColor" red="0.97254901959999995" green="0.086274509799999996" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="gBb-Be-25E" appends="YES" id="w2f-EI-8M2"/>
-                    </connections>
                 </label>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="◀︎" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.30000001192092896" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wtk-sC-kTE" userLabel="Left Arrow Shadow">
+                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="◀︎" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.30000001192092896" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wtk-sC-kTE" userLabel="Left Arrow Shadow">
                     <rect key="frame" x="109" y="84" width="96" height="110.5"/>
+                    <gestureRecognizers/>
                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="96"/>
                     <color key="textColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
+                    <connections>
+                        <outletCollection property="gestureRecognizers" destination="3bH-3l-hdT" appends="YES" id="eED-c5-ula"/>
+                    </connections>
                 </label>
-                <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.30000001192092896" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TCy-hk-bgF">
-                    <rect key="frame" x="205" y="84" width="0.0" height="0.0"/>
+                <label hidden="YES" opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="◀︎" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.30000001192092896" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TCy-hk-bgF">
+                    <rect key="frame" x="109" y="84" width="96" height="110.5"/>
                     <gestureRecognizers/>
                     <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="96"/>
                     <color key="textColor" red="0.97254901959999995" green="0.086274509799999996" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
-                    <connections>
-                        <outletCollection property="gestureRecognizers" destination="XpV-ON-aVN" appends="YES" id="pxS-Xh-be1"/>
-                    </connections>
                 </label>
             </subviews>
             <constraints>
@@ -74,16 +76,16 @@
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <point key="canvasLocation" x="171.09375" y="167.87109375"/>
+            <point key="canvasLocation" x="165" y="64"/>
         </view>
-        <tapGestureRecognizer id="XpV-ON-aVN">
+        <tapGestureRecognizer id="L3M-ox-g6z">
             <connections>
-                <action selector="onLeftArrowClicked:" destination="-1" id="hOk-a0-Eym"/>
+                <action selector="onRightArrowClicked:" destination="-1" id="gkv-CH-6pp"/>
             </connections>
         </tapGestureRecognizer>
-        <tapGestureRecognizer id="gBb-Be-25E">
+        <tapGestureRecognizer id="3bH-3l-hdT">
             <connections>
-                <action selector="onRightArrowClicked:" destination="-1" id="Ms7-Mr-Qem"/>
+                <action selector="onLeftArrowClicked:" destination="-1" id="eI8-21-l8J"/>
             </connections>
         </tapGestureRecognizer>
     </objects>

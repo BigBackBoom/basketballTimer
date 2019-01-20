@@ -14,6 +14,7 @@
 		57A5F268A7F0C7C8B95FC1C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A5FFE0520B978D932845F7 /* LaunchScreen.storyboard */; };
 		57A5F33A7BFF7DDDA01F317D /* TimerUIDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A5F13BF422DB4E13152A85 /* TimerUIDelegate.swift */; };
 		57A5F47E5D6F8B347FA64A5E /* TimerPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A5F92D98D5680BEB00FA9C /* TimerPresenterProtocol.swift */; };
+		57A5F9EB084CC3FD7612896D /* PossArrowDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A5FF60A13D5C854A79C449 /* PossArrowDirections.swift */; };
 		57A5FB4AFC7C9C55B669D442 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A5FA757195A01FA158B1E6 /* TimerModel.swift */; };
 		E900FCF021AC1988001D5CC1 /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E900FCF221AC1988001D5CC1 /* Timer.storyboard */; };
 		E900FD0221AC1F35001D5CC1 /* DSEG7Classic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E900FCFF21AC1F0B001D5CC1 /* DSEG7Classic-Bold.ttf */; };
@@ -30,6 +31,7 @@
 		E907EC9521F45AB5000E03A4 /* PossArrowProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907EC9421F45AB5000E03A4 /* PossArrowProtocol.swift */; };
 		E907EC9721F45C59000E03A4 /* PossArrowUIDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907EC9621F45C59000E03A4 /* PossArrowUIDelegate.swift */; };
 		E907EC9921F45CB8000E03A4 /* PossArrowPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907EC9821F45CB8000E03A4 /* PossArrowPresenter.swift */; };
+		E907EC9B21F474B9000E03A4 /* PossArrowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907EC9A21F474B9000E03A4 /* PossArrowModel.swift */; };
 		E999477D21EB0E83001CEB1A /* PossArrow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E999477C21EB0E83001CEB1A /* PossArrow.xib */; };
 		E999478121EB0F45001CEB1A /* PossArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E999478021EB0F45001CEB1A /* PossArrowView.swift */; };
 		E9B8BE4621D9F3890077D86A /* SoundPlayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B8BE4521D9F3890077D86A /* SoundPlayModel.swift */; };
@@ -71,6 +73,7 @@
 		57A5FCA93FCDF832E5C7B018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57A5FCCCDDE9F2D70145949B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		57A5FD7C3390EEBEDE005DDE /* TimerViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewPresenter.swift; sourceTree = "<group>"; };
+		57A5FF60A13D5C854A79C449 /* PossArrowDirections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PossArrowDirections.swift; sourceTree = "<group>"; };
 		57A5FF92C3A6CDEA25AA543A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E900FCF121AC1988001D5CC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Timer.storyboard; sourceTree = "<group>"; };
 		E900FCFB21AC1F0B001D5CC1 /* DSEG7Classic-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DSEG7Classic-Italic.ttf"; sourceTree = "<group>"; };
@@ -86,6 +89,7 @@
 		E907EC9421F45AB5000E03A4 /* PossArrowProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossArrowProtocol.swift; sourceTree = "<group>"; };
 		E907EC9621F45C59000E03A4 /* PossArrowUIDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossArrowUIDelegate.swift; sourceTree = "<group>"; };
 		E907EC9821F45CB8000E03A4 /* PossArrowPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossArrowPresenter.swift; sourceTree = "<group>"; };
+		E907EC9A21F474B9000E03A4 /* PossArrowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossArrowModel.swift; sourceTree = "<group>"; };
 		E999477C21EB0E83001CEB1A /* PossArrow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PossArrow.xib; sourceTree = "<group>"; };
 		E999478021EB0F45001CEB1A /* PossArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossArrowView.swift; sourceTree = "<group>"; };
 		E9B8BE4521D9F3890077D86A /* SoundPlayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayModel.swift; sourceTree = "<group>"; };
@@ -250,6 +254,7 @@
 		E907EC9221F45A80000E03A4 /* PossArrow */ = {
 			isa = PBXGroup;
 			children = (
+				E907EC9A21F474B9000E03A4 /* PossArrowModel.swift */,
 			);
 			path = PossArrow;
 			sourceTree = "<group>";
@@ -259,6 +264,7 @@
 			children = (
 				E907EC9421F45AB5000E03A4 /* PossArrowProtocol.swift */,
 				E907EC9821F45CB8000E03A4 /* PossArrowPresenter.swift */,
+				57A5FF60A13D5C854A79C449 /* PossArrowDirections.swift */,
 			);
 			path = PossArrow;
 			sourceTree = "<group>";
@@ -386,6 +392,7 @@
 			files = (
 				E900FD0C21AC2205001D5CC1 /* UIColors+Util.swift in Sources */,
 				E907EC9721F45C59000E03A4 /* PossArrowUIDelegate.swift in Sources */,
+				E907EC9B21F474B9000E03A4 /* PossArrowModel.swift in Sources */,
 				E900FD4821B18447001D5CC1 /* TimerViewController.swift in Sources */,
 				E907EC9521F45AB5000E03A4 /* PossArrowProtocol.swift in Sources */,
 				57A5F057BBD56BE84BE59D15 /* AppDelegate.swift in Sources */,
@@ -396,6 +403,7 @@
 				57A5F47E5D6F8B347FA64A5E /* TimerPresenterProtocol.swift in Sources */,
 				E9B8BE4621D9F3890077D86A /* SoundPlayModel.swift in Sources */,
 				E907EC9921F45CB8000E03A4 /* PossArrowPresenter.swift in Sources */,
+				57A5F9EB084CC3FD7612896D /* PossArrowDirections.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
