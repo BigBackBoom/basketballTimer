@@ -15,12 +15,9 @@ class TimerViewPresenter: TimerPresenterProtocol {
     }
 
     private let minConvert = 60000
-
     private let delegate: TimerUIDelegate
     private var timerModel: TimerModel = TimerModel()
-
     private var soundPlayModel: SoundPlayModel = SoundPlayModel()
-
 
     required init(delegate: TimerUIDelegate) {
         self.delegate = delegate
