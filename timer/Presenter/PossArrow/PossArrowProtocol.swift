@@ -12,4 +12,5 @@ protocol PossArrowProtocol {
     func turnOnArrow(arrowDirection: ArrowDirection)
     func switchArrow()
     func isTurnedOn() -> Bool
+    func resetArrow()
 }

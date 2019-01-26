@@ -36,6 +36,13 @@ class PossArrowPresenter: PossArrowProtocol {
         return possArrowModel.isTurnedOn()
     }
 
+    func resetArrow() {
+        possArrowModel.isRight = false
+        possArrowModel.isLeft = false
+        delegate.updateLeftArrow(isHidden: true)
+        delegate.updateRightArrow(isHidden: true)
+    }
+
     private func updateArrowDirection() {
         if (possArrowModel.isRight) {
             delegate.updateLeftArrow(isHidden: false)

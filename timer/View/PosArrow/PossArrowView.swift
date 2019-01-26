@@ -75,6 +75,9 @@ class PossArrowView: UIView {
         }
     }
 
+    @IBAction func onResetButtonClicked(_ sender: Any) {
+        possArrowPresenter?.resetArrow()
+    }
 }
 
 extension PossArrowView: PossArrowUIDelegate {
