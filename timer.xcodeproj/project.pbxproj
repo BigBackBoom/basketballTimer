@@ -14,6 +14,7 @@
 		57A5F268A7F0C7C8B95FC1C3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57A5FFE0520B978D932845F7 /* LaunchScreen.storyboard */; };
 		57A5F33A7BFF7DDDA01F317D /* TimerUIDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A5F13BF422DB4E13152A85 /* TimerUIDelegate.swift */; };
 		57A5F47E5D6F8B347FA64A5E /* TimerPresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A5F92D98D5680BEB00FA9C /* TimerPresenterProtocol.swift */; };
+		57A5F9EB084CC3FD7612896D /* PossArrowDirections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A5FF60A13D5C854A79C449 /* PossArrowDirections.swift */; };
 		57A5FB4AFC7C9C55B669D442 /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57A5FA757195A01FA158B1E6 /* TimerModel.swift */; };
 		E900FCF021AC1988001D5CC1 /* Timer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E900FCF221AC1988001D5CC1 /* Timer.storyboard */; };
 		E900FD0221AC1F35001D5CC1 /* DSEG7Classic-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E900FCFF21AC1F0B001D5CC1 /* DSEG7Classic-Bold.ttf */; };
@@ -25,10 +26,14 @@
 		E900FD0821AC1F35001D5CC1 /* DSEG7Classic-RegularItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E900FD0021AC1F0B001D5CC1 /* DSEG7Classic-RegularItalic.ttf */; };
 		E900FD0C21AC2205001D5CC1 /* UIColors+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = E900FD0B21AC2205001D5CC1 /* UIColors+Util.swift */; };
 		E900FD4821B18447001D5CC1 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E900FD4721B18447001D5CC1 /* TimerViewController.swift */; };
-		E900FD4C21B22396001D5CC1 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E900FD4A21B2233C001D5CC1 /* RxSwift.framework */; };
-		E900FD4E21B223FC001D5CC1 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E900FD4A21B2233C001D5CC1 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		E999477D21EB0E83001CEB1A /* PosArrow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E999477C21EB0E83001CEB1A /* PosArrow.xib */; };
-		E999478121EB0F45001CEB1A /* PosArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E999478021EB0F45001CEB1A /* PosArrowView.swift */; };
+		E907EC9521F45AB5000E03A4 /* PossArrowProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907EC9421F45AB5000E03A4 /* PossArrowProtocol.swift */; };
+		E907EC9721F45C59000E03A4 /* PossArrowUIDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907EC9621F45C59000E03A4 /* PossArrowUIDelegate.swift */; };
+		E907EC9921F45CB8000E03A4 /* PossArrowPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907EC9821F45CB8000E03A4 /* PossArrowPresenter.swift */; };
+		E907EC9B21F474B9000E03A4 /* PossArrowModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E907EC9A21F474B9000E03A4 /* PossArrowModel.swift */; };
+		E93FA78F224EFC83004D0D19 /* RxSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E93FA78E224EFC83004D0D19 /* RxSwift.framework */; };
+		E93FA790224EFC83004D0D19 /* RxSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E93FA78E224EFC83004D0D19 /* RxSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E999477D21EB0E83001CEB1A /* PossArrow.xib in Resources */ = {isa = PBXBuildFile; fileRef = E999477C21EB0E83001CEB1A /* PossArrow.xib */; };
+		E999478121EB0F45001CEB1A /* PossArrowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E999478021EB0F45001CEB1A /* PossArrowView.swift */; };
 		E9B8BE4621D9F3890077D86A /* SoundPlayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9B8BE4521D9F3890077D86A /* SoundPlayModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,13 +48,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		E900FD4F21B223FD001D5CC1 /* Embed Frameworks */ = {
+		E93FA78C224EFB37004D0D19 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				E900FD4E21B223FC001D5CC1 /* RxSwift.framework in Embed Frameworks */,
+				E93FA790224EFC83004D0D19 /* RxSwift.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -68,6 +73,7 @@
 		57A5FCA93FCDF832E5C7B018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57A5FCCCDDE9F2D70145949B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		57A5FD7C3390EEBEDE005DDE /* TimerViewPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerViewPresenter.swift; sourceTree = "<group>"; };
+		57A5FF60A13D5C854A79C449 /* PossArrowDirections.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PossArrowDirections.swift; sourceTree = "<group>"; };
 		57A5FF92C3A6CDEA25AA543A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E900FCF121AC1988001D5CC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Timer.storyboard; sourceTree = "<group>"; };
 		E900FCFB21AC1F0B001D5CC1 /* DSEG7Classic-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DSEG7Classic-Italic.ttf"; sourceTree = "<group>"; };
@@ -79,9 +85,13 @@
 		E900FD0121AC1F0B001D5CC1 /* DSEG7Classic-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "DSEG7Classic-Regular.ttf"; sourceTree = "<group>"; };
 		E900FD0B21AC2205001D5CC1 /* UIColors+Util.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColors+Util.swift"; sourceTree = "<group>"; };
 		E900FD4721B18447001D5CC1 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
-		E900FD4A21B2233C001D5CC1 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
-		E999477C21EB0E83001CEB1A /* PosArrow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PosArrow.xib; sourceTree = "<group>"; };
-		E999478021EB0F45001CEB1A /* PosArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosArrowView.swift; sourceTree = "<group>"; };
+		E907EC9421F45AB5000E03A4 /* PossArrowProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossArrowProtocol.swift; sourceTree = "<group>"; };
+		E907EC9621F45C59000E03A4 /* PossArrowUIDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossArrowUIDelegate.swift; sourceTree = "<group>"; };
+		E907EC9821F45CB8000E03A4 /* PossArrowPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossArrowPresenter.swift; sourceTree = "<group>"; };
+		E907EC9A21F474B9000E03A4 /* PossArrowModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossArrowModel.swift; sourceTree = "<group>"; };
+		E93FA78E224EFC83004D0D19 /* RxSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RxSwift.framework; path = Carthage/Build/iOS/RxSwift.framework; sourceTree = "<group>"; };
+		E999477C21EB0E83001CEB1A /* PossArrow.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PossArrow.xib; sourceTree = "<group>"; };
+		E999478021EB0F45001CEB1A /* PossArrowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PossArrowView.swift; sourceTree = "<group>"; };
 		E9B8BE4521D9F3890077D86A /* SoundPlayModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundPlayModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -97,7 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E900FD4C21B22396001D5CC1 /* RxSwift.framework in Frameworks */,
+				E93FA78F224EFC83004D0D19 /* RxSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,10 +126,10 @@
 		57A5F63D6B9B2881C232C7CB = {
 			isa = PBXGroup;
 			children = (
+				E93FA78E224EFC83004D0D19 /* RxSwift.framework */,
 				57A5F078C71F7B2543BF3226 /* Products */,
 				57A5F6D4CD4E5F4CB83DA425 /* timer */,
 				57A5F7000F19FA98E3BB0472 /* timerTests */,
-				E900FD4921B2233C001D5CC1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,6 +178,7 @@
 		E900FCE921AC16D8001D5CC1 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				E907EC9321F45A8A000E03A4 /* PossArrow */,
 				E900FD5021B40027001D5CC1 /* Timer */,
 			);
 			path = Presenter;
@@ -176,6 +187,7 @@
 		E900FCEA21AC16E7001D5CC1 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				E907EC9221F45A80000E03A4 /* PossArrow */,
 				E9B8BE4421D9EA400077D86A /* Util */,
 				57A5F8B94FD1F1F022613F36 /* Timer */,
 			);
@@ -222,14 +234,6 @@
 			path = Excentesions;
 			sourceTree = "<group>";
 		};
-		E900FD4921B2233C001D5CC1 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E900FD4A21B2233C001D5CC1 /* RxSwift.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		E900FD5021B40027001D5CC1 /* Timer */ = {
 			isa = PBXGroup;
 			children = (
@@ -239,11 +243,30 @@
 			path = Timer;
 			sourceTree = "<group>";
 		};
+		E907EC9221F45A80000E03A4 /* PossArrow */ = {
+			isa = PBXGroup;
+			children = (
+				E907EC9A21F474B9000E03A4 /* PossArrowModel.swift */,
+			);
+			path = PossArrow;
+			sourceTree = "<group>";
+		};
+		E907EC9321F45A8A000E03A4 /* PossArrow */ = {
+			isa = PBXGroup;
+			children = (
+				E907EC9421F45AB5000E03A4 /* PossArrowProtocol.swift */,
+				E907EC9821F45CB8000E03A4 /* PossArrowPresenter.swift */,
+				57A5FF60A13D5C854A79C449 /* PossArrowDirections.swift */,
+			);
+			path = PossArrow;
+			sourceTree = "<group>";
+		};
 		E999477B21EB0E59001CEB1A /* PosArrow */ = {
 			isa = PBXGroup;
 			children = (
-				E999477C21EB0E83001CEB1A /* PosArrow.xib */,
-				E999478021EB0F45001CEB1A /* PosArrowView.swift */,
+				E999477C21EB0E83001CEB1A /* PossArrow.xib */,
+				E999478021EB0F45001CEB1A /* PossArrowView.swift */,
+				E907EC9621F45C59000E03A4 /* PossArrowUIDelegate.swift */,
 			);
 			path = PosArrow;
 			sourceTree = "<group>";
@@ -266,7 +289,8 @@
 				57A5F033106A663F1993BAF2 /* Sources */,
 				57A5F48B1448BFE7B5AE87C2 /* Frameworks */,
 				57A5F9195AE51A0DEF68A2E9 /* Resources */,
-				E900FD4F21B223FD001D5CC1 /* Embed Frameworks */,
+				E93FA78C224EFB37004D0D19 /* Embed Frameworks */,
+				E93FA791224EFCDB004D0D19 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -313,7 +337,9 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
+				Base,
 			);
 			mainGroup = 57A5F63D6B9B2881C232C7CB;
 			productRefGroup = 57A5F078C71F7B2543BF3226 /* Products */;
@@ -337,7 +363,7 @@
 				E900FD0521AC1F35001D5CC1 /* DSEG7Classic-Light.ttf in Resources */,
 				E900FD0621AC1F35001D5CC1 /* DSEG7Classic-LightItalic.ttf in Resources */,
 				E900FD0721AC1F35001D5CC1 /* DSEG7Classic-Regular.ttf in Resources */,
-				E999477D21EB0E83001CEB1A /* PosArrow.xib in Resources */,
+				E999477D21EB0E83001CEB1A /* PossArrow.xib in Resources */,
 				E900FD0821AC1F35001D5CC1 /* DSEG7Classic-RegularItalic.ttf in Resources */,
 				E900FCF021AC1988001D5CC1 /* Timer.storyboard in Resources */,
 				57A5F069BAA657150CA8525E /* Assets.xcassets in Resources */,
@@ -354,20 +380,46 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		E93FA791224EFCDB004D0D19 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/RxSwift.framework",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		57A5F033106A663F1993BAF2 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				E900FD0C21AC2205001D5CC1 /* UIColors+Util.swift in Sources */,
+				E907EC9721F45C59000E03A4 /* PossArrowUIDelegate.swift in Sources */,
+				E907EC9B21F474B9000E03A4 /* PossArrowModel.swift in Sources */,
 				E900FD4821B18447001D5CC1 /* TimerViewController.swift in Sources */,
+				E907EC9521F45AB5000E03A4 /* PossArrowProtocol.swift in Sources */,
 				57A5F057BBD56BE84BE59D15 /* AppDelegate.swift in Sources */,
 				57A5F0FED394BAE3157B94D1 /* TimerViewPresenter.swift in Sources */,
-				E999478121EB0F45001CEB1A /* PosArrowView.swift in Sources */,
+				E999478121EB0F45001CEB1A /* PossArrowView.swift in Sources */,
 				57A5FB4AFC7C9C55B669D442 /* TimerModel.swift in Sources */,
 				57A5F33A7BFF7DDDA01F317D /* TimerUIDelegate.swift in Sources */,
 				57A5F47E5D6F8B347FA64A5E /* TimerPresenterProtocol.swift in Sources */,
 				E9B8BE4621D9F3890077D86A /* SoundPlayModel.swift in Sources */,
+				E907EC9921F45CB8000E03A4 /* PossArrowPresenter.swift in Sources */,
+				57A5F9EB084CC3FD7612896D /* PossArrowDirections.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -417,6 +469,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = timer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -579,6 +632,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
+					"$(PROJECT_DIR)/Frameworks",
 				);
 				INFOPLIST_FILE = timer/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;

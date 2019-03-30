@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad12_9rounded" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PossArrowView" customModule="Sefo_Timer" customModuleProvider="target">
+            <connections>
+                <outlet property="LeftArrowLabel" destination="TCy-hk-bgF" id="9BD-Sw-bSx"/>
+                <outlet property="RightArrowLabel" destination="m5i-JI-s1s" id="NqS-Ni-k2w"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="302" height="252"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTV-wn-XWT" userLabel="ArrowView">
+                    <rect key="frame" x="15" y="73" width="272" height="125"/>
+                    <subviews>
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="▶︎" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.29999999999999999" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n1K-vb-dcz" userLabel="Right Arrow Shadow">
+                            <rect key="frame" x="176" y="0.0" width="96" height="125"/>
+                            <gestureRecognizers/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="96"/>
+                            <color key="textColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="L3M-ox-g6z" appends="YES" id="kaE-ad-TYn"/>
+                            </connections>
+                        </label>
+                        <label hidden="YES" opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="▶︎" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.29999999999999999" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m5i-JI-s1s">
+                            <rect key="frame" x="176" y="0.0" width="96" height="125"/>
+                            <gestureRecognizers/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="96"/>
+                            <color key="textColor" red="0.97254901959999995" green="0.086274509799999996" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="◀︎" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.29999999999999999" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wtk-sC-kTE" userLabel="Left Arrow Shadow">
+                            <rect key="frame" x="0.0" y="0.0" width="96" height="125"/>
+                            <gestureRecognizers/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="96"/>
+                            <color key="textColor" red="0.098039215690000001" green="0.098039215690000001" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                            <connections>
+                                <outletCollection property="gestureRecognizers" destination="3bH-3l-hdT" appends="YES" id="eED-c5-ula"/>
+                            </connections>
+                        </label>
+                        <label hidden="YES" opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="◀︎" textAlignment="center" lineBreakMode="tailTruncation" minimumScaleFactor="0.29999999999999999" adjustsLetterSpacingToFitWidth="YES" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TCy-hk-bgF">
+                            <rect key="frame" x="0.0" y="0.0" width="96" height="125"/>
+                            <gestureRecognizers/>
+                            <fontDescription key="fontDescription" name="Helvetica-Bold" family="Helvetica" pointSize="96"/>
+                            <color key="textColor" red="0.97254901959999995" green="0.086274509799999996" blue="0.062745098040000002" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ePK-tQ-D2R">
+                            <rect key="frame" x="106" y="42" width="60" height="41"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <state key="normal" title="Reset">
+                                <color key="titleColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="onResetButtonClicked:" destination="-1" eventType="touchUpInside" id="Miu-T6-LwK"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="TCy-hk-bgF" firstAttribute="leading" secondItem="vTV-wn-XWT" secondAttribute="leading" id="4Yg-4O-G5L"/>
+                        <constraint firstItem="ePK-tQ-D2R" firstAttribute="centerY" secondItem="vTV-wn-XWT" secondAttribute="centerY" id="6IV-dI-1r6"/>
+                        <constraint firstItem="m5i-JI-s1s" firstAttribute="height" secondItem="vTV-wn-XWT" secondAttribute="height" id="8zm-Ay-DFn"/>
+                        <constraint firstItem="Wtk-sC-kTE" firstAttribute="centerY" secondItem="vTV-wn-XWT" secondAttribute="centerY" id="ABg-Jh-zNg"/>
+                        <constraint firstAttribute="trailing" secondItem="m5i-JI-s1s" secondAttribute="trailing" id="K3c-32-A7A"/>
+                        <constraint firstItem="TCy-hk-bgF" firstAttribute="height" secondItem="vTV-wn-XWT" secondAttribute="height" id="M9W-nE-5jh"/>
+                        <constraint firstItem="Wtk-sC-kTE" firstAttribute="height" secondItem="vTV-wn-XWT" secondAttribute="height" id="RIQ-Be-7V6"/>
+                        <constraint firstItem="TCy-hk-bgF" firstAttribute="centerY" secondItem="vTV-wn-XWT" secondAttribute="centerY" id="TzV-qC-WOe"/>
+                        <constraint firstItem="m5i-JI-s1s" firstAttribute="centerY" secondItem="vTV-wn-XWT" secondAttribute="centerY" id="e4j-Vl-IO3"/>
+                        <constraint firstAttribute="trailing" secondItem="n1K-vb-dcz" secondAttribute="trailing" id="fMP-4n-zya"/>
+                        <constraint firstItem="n1K-vb-dcz" firstAttribute="height" secondItem="vTV-wn-XWT" secondAttribute="height" id="kBB-js-INR"/>
+                        <constraint firstItem="ePK-tQ-D2R" firstAttribute="centerX" secondItem="vTV-wn-XWT" secondAttribute="centerX" id="nMC-XS-jkN"/>
+                        <constraint firstItem="n1K-vb-dcz" firstAttribute="centerY" secondItem="vTV-wn-XWT" secondAttribute="centerY" id="vIn-mL-fCc"/>
+                        <constraint firstItem="Wtk-sC-kTE" firstAttribute="leading" secondItem="vTV-wn-XWT" secondAttribute="leading" id="vjB-vv-bPJ"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POSS" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nf9-JF-Z4O">
+                    <rect key="frame" x="89" y="5" width="124" height="68"/>
+                    <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="48"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <rect key="contentStretch" x="0.0" y="0.0" width="0.94999999999999996" height="1"/>
+            <constraints>
+                <constraint firstItem="nf9-JF-Z4O" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="1aU-mJ-MwX"/>
+                <constraint firstItem="vTV-wn-XWT" firstAttribute="top" secondItem="nf9-JF-Z4O" secondAttribute="bottom" id="GaD-Ml-HhJ"/>
+                <constraint firstItem="vTV-wn-XWT" firstAttribute="height" secondItem="vUN-kp-3ea" secondAttribute="height" multiplier="0.6" id="Qph-UD-6CN"/>
+                <constraint firstItem="vTV-wn-XWT" firstAttribute="width" secondItem="vUN-kp-3ea" secondAttribute="width" multiplier="0.9" id="ccV-B0-Mp8"/>
+                <constraint firstItem="vTV-wn-XWT" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="q5i-eI-cWU"/>
+                <constraint firstAttribute="top" secondItem="nf9-JF-Z4O" secondAttribute="top" constant="-5" id="yDY-7G-3lq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="67.96875" y="-33.382137628111273"/>
+        </view>
+        <tapGestureRecognizer id="L3M-ox-g6z">
+            <connections>
+                <action selector="onRightArrowClicked:" destination="-1" id="gkv-CH-6pp"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="3bH-3l-hdT">
+            <connections>
+                <action selector="onLeftArrowClicked:" destination="-1" id="eI8-21-l8J"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+</document>
